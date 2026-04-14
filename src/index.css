@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@source "../**/*.{ts,tsx,js,jsx}";
+
+@theme {
+  /* Brand */
+  --color-brand:           #6039B9;
+  --color-brand-hover:     #4B2A96;
+  --color-brand-light:     #EBE5F5;
+  --color-brand-light-hover: #F4F2F7;
+
+  /* Excel */
+  --color-excel:       #4DA542;
+  --color-excel-light: #e6f2e4;
+
+  /* Neutral */
+  --color-border-gray:     #999;
+  --color-text-gray:       #555;
+  --color-gray-hover:      #F5F5F5;
+
+  /* Ghost (circle button) */
+  --color-ghost:           #f1f1f1;
+  --color-ghost-hover:     #e0e0e0;
+}
+
+/* 버튼 사이즈 */
+.btn-sm { padding-left: 8px;  padding-right: 8px;  height: 24px; font-size: 12px; }
+.btn-md { padding-left: 14px; padding-right: 14px; height: 32px; font-size: 14px; }
+.btn-lg { padding-left: 20px; padding-right: 20px; height: 52px; font-size: 16px; }
+
+/* 원형 버튼 사이즈 (padding 제거, w = h) */
+.btn-sm-circle { width: 24px; height: 24px; padding: 0; }
+.btn-md-circle { width: 32px; height: 32px; padding: 0; }
+.btn-lg-circle { width: 52px; height: 52px; padding: 0; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
