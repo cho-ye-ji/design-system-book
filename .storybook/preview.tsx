@@ -1,7 +1,9 @@
 import type { Preview } from '@storybook/react-vite'
 import '../src/index.css'
+import { CodeFormatDecorator } from './CodeFormatDecorator'
 
 const preview: Preview = {
+  decorators: [CodeFormatDecorator],
   parameters: {
     controls: {
       matchers: {

@@ -1,9 +1,12 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const config: StorybookConfig = {
-  "stories": [
+  stories: [
     "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    ...(isProd ? ["!../src/_private/**"] : []),
   ],
   "addons": [
     "@storybook/addon-docs",
