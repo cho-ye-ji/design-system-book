@@ -19,7 +19,7 @@ function Chip({
   return (
     <span
       className={cn(
-        'inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium',
+        'chip inline-flex items-center gap-1 rounded-full text-sm font-medium',
         variant === 'filled'
           ? 'bg-brand text-white'
           : 'bg-white text-brand border border-brand',

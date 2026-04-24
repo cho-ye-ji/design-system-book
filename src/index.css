@@ -27,17 +27,22 @@
 .btn-md { padding-left: 14px; padding-right: 14px; height: 32px; font-size: 14px; }
 .btn-lg { padding-left: 20px; padding-right: 20px; height: 52px; font-size: 16px; }
 
+/* Chip */
+.chip { padding: 5px 10px; }
+
 /* 원형 버튼 사이즈 (padding 제거, w = h) */
 .btn-sm-circle { width: 24px; height: 24px; padding: 0; }
 .btn-md-circle { width: 32px; height: 32px; padding: 0; }
 .btn-lg-circle { width: 52px; height: 52px; padding: 0; }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-body {
-  font-family: system-ui, sans-serif;
+  body {
+    font-family: system-ui, sans-serif;
+  }
 }

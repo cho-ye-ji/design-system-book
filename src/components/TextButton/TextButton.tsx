@@ -23,12 +23,14 @@ function TextButton({
   return (
     <button
       className={cn(
-        'inline-flex items-center gap-1.5 bg-transparent border-none cursor-pointer font-medium transition-opacity',
-        color === 'brand' ? 'text-brand hover:opacity-70' : 'text-text-gray hover:opacity-70',
+        'inline-flex items-center gap-1.5 bg-transparent border-none cursor-pointer font-medium transition-colors rounded px-2 py-1',
+        color === 'brand'
+          ? 'text-brand hover:bg-brand-light-hover'
+          : 'text-text-gray hover:bg-gray-hover',
         size === 'sm' && 'text-xs',
         size === 'md' && 'text-sm',
         size === 'lg' && 'text-base',
-        disabled && 'opacity-40 cursor-not-allowed',
+        disabled && 'text-[#ccc] cursor-not-allowed hover:bg-transparent',
       )}
       onClick={onClick}
       disabled={disabled}

@@ -10,8 +10,10 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y"
   ],
   "framework": "@storybook/react-vite",
-  viteFinal: async (config) => {
-    config.base = '/design-system-book/'
+  viteFinal: async (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/design-system-book/'
+    }
     return config
   }
 };
